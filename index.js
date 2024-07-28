@@ -5,7 +5,7 @@ try {
         "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.DUOLINGO_JWT}`,
         "user-agent":
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, như Gecko) Chrome/121.0.0.0 Safari/537.36",
     };
 
     const { sub } = JSON.parse(
@@ -105,9 +105,9 @@ try {
                 body: JSON.stringify({
                     ...session,
                     heartsLeft: 0,
-                    startTime: (+new Date() - 10000) / 1000, // Giảm thời gian giả lập
+                    startTime: (+new Date() - 1000) / 1000, // Giả lập thời gian bắt đầu cách đây 1 giây
                     enableBonusPoints: false,
-                    endTime: +new Date() / 1000,
+                    endTime: +new Date() / 1000, // Kết thúc ngay bây giờ
                     failed: false,
                     maxInLessonStreak: 9,
                     shouldLearnThings: true,
