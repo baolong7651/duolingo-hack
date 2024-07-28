@@ -105,7 +105,7 @@ try {
                 body: JSON.stringify({
                     ...session,
                     heartsLeft: 0,
-                    startTime: (+new Date() - 1000) / 1000, // Giả lập thời gian bắt đầu cách đây 1 giây
+                    startTime: (+new Date() - 1) / 1000, // Giả lập thời gian bắt đầu cách đây 1 mili giây
                     enableBonusPoints: false,
                     endTime: +new Date() / 1000, // Kết thúc ngay bây giờ
                     failed: false,
